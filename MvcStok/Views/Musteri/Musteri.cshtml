@@ -1,0 +1,30 @@
+﻿@using MvcStok.Models.Entity
+@model List<TblMusteriler>
+@{
+    ViewBag.Title = "Musteri";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>MÜŞTERİ ID</th>
+        <th>MÜŞTERİ ADI</th>
+        <th>MÜŞTERİ SOYADI</th>
+        
+
+
+    </tr>
+    <tbody>
+        @foreach (var mus in Model)
+        {
+            <tr>
+                <td>@mus.MusteriID</td>
+                <td>@mus.MusteriAd</td>
+                <td>@mus.MusteriSoyad</td>
+              
+            </tr>
+        }
+    </tbody>
+
+</table>
+
